@@ -58,7 +58,7 @@ class Training:
 
     @staticmethod
     def save_model(path: Path, model: tf.keras.Model):
-        model.save(path)
+        model.save(str(path))
 
 
     def train(self, callback_list: list):
