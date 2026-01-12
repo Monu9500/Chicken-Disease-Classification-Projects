@@ -1,3 +1,8 @@
+import pathlib
+pathlib.WindowsPath.endswith = lambda self, suffix: str(self).endswith(suffix)
+pathlib.WindowsPath.format = lambda self, *args, **kwargs: str(self).format(*args, **kwargs)
+
+
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.prepare_callbacks import PrepareCallback
 from cnnClassifier.components.training import Training
